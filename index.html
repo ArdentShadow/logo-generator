@@ -24,7 +24,7 @@
     <!-- END OF NAVBAR-->
 
 <div id="titler">
-<h1><center><u>Logo generator</u></center></h1>
+<h1><center><u>Logo Generator</u></center></h1>
 <h3><center>This is a basic logo generator</center></h3>
 </div>
 
@@ -32,12 +32,15 @@
 
 <div class="container" id="ctbig">
     <div class="container" id="ctleft">
-        <h2>Text</h2>
-
+        <div class="container" id="topsm">
+        <h1><center>Text</center></h1>
+    </div>
     </div>
 
     <div class="container" id="ctright">
-        <h2>Icon</h2>
+        <div class="container" id="topsm">
+        <h1><center>Icon</center></h1>
+        </div>
     </div>
 
     <div class="container" id="finalProduct">
@@ -57,3 +60,114 @@
     <script src="index.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+<!-- borrowed code-->
+
+
+<div class="row mb-2">
+    <div class="col-md-6 mb-2 mb-md-0">
+      <div class="card border-secondary">
+        <div class="card-header d-flex align-items-center">
+          <span class="flex-grow-1 font-weight-bold">Global</span>
+          <button class="btn btn-light btn-xs" type="button" data-toggle="collapse" data-target="#global-fieldset"
+            aria-expanded="true" aria-controls="global-fieldset"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+        </div>
+        <div class="card-body text-secondary collapsible collapse show" id="global-fieldset">
+          <div class="input-group input-group-sm mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Layout</span>
+            </div>
+            <input type="checkbox" checked data-toggle="toggle" data-on="Horizontal"
+              data-off="Vertical" data-onstyle="outline-dark" data-offstyle="outline-secondary" data-size="sm"
+              data-param="layout" data-component="global" id="layout-toggle">
+          </div>
+          <div class="input-group input-group-sm mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Shapes</span>
+            </div>
+            <input type="checkbox" checked data-toggle="toggle" data-on="On" data-off="Off"
+              data-onstyle="outline-dark" data-offstyle="outline-secondary" data-size="sm" data-param="shapes"
+              data-component="global" id="shapes-toggle">
+          </div>
+          <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Offset</span>
+            </div>
+            <input type="color" id="offset-clr" value="#f2f2f2" class="form-control" aria-label="color"
+              aria-describedby="basic-addon1" data-param="offsetColor" data-component="global"/>
+            <input type="range" class="form-control custom-range w-25" data-param="offsetSize"
+              data-component="global" value="0" min="0" max="10" step=".5" id="offset_size-rng" />
+            <div class="input-group-append" data-display="value">
+              <span class="input-group-text" id="offset_size-value">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card border-secondary">
+        <div class="card-header d-flex align-items-center">
+          <span class="flex-grow-1 font-weight-bold">Icon</span>
+          <button class="btn btn-light btn-xs" type="button" data-toggle="collapse" data-target="#icon-fieldset"
+            aria-expanded="true" aria-controls="icon-fieldset"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+        </div>
+        <div class="card-body text-secondary collapsible collapse show" id="icon-fieldset">
+
+
+
+          <div class="input-group input-group-sm mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Icon</span>
+            </div>
+            <div class="input-group-apppend ml-1">
+              <div class="btn-group d-flex btn-group-sm">
+                <button id="icp-component" type="button"
+                  class="btn btn-outline-secondary iconpicker-component w-100">
+                  <i class="fa fa-fw fa-heart" aria-hidden="true"></i>
+                </button>
+                <button id="icp" type="button" class="btn btn-secondary dropdown-toggle" data-selected="fa-car"
+                  data-toggle="dropdown">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu"></div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="input-group input-group-sm mb-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Size</span>
+            </div>
+            <input type="range" class="form-control custom-range" value="48" min="25" max="100" step="1"
+              id="icon-sz" data-param="fontSize" data-component="icon" />
+            <div class="input-group-append" data-display="value">
+              <span class="input-group-text" id="icon_size-value">48</span>
+            </div>
+          </div>
+          <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Color</span>
+            </div>
+            <input type="color" id="icon-clr" class="form-control" aria-label="color"
+              aria-describedby="basic-addon1" data-param="color" data-component="icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
